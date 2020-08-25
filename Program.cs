@@ -83,7 +83,7 @@ namespace DataExtraction
                                 continue;
                             }
 
-                            var splited = line.Split(',', StringSplitOptions.None);
+                            var splited = line.Split(',', StringSplitOptions.RemoveEmptyEntries);
                             if (splited.Length >= columns)
                             {//when columns count is equal or greater than the required number                                
                                 writer.Write(lineNum);
